@@ -1,0 +1,236 @@
+/* Base: fonte, cores e dimensões incluem o espaço das bordas. */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #f3f5f1;
+    color: #273b35;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+header {
+    padding: 44px 24px;
+    background-color: #214d40;
+    color: #ffffff;
+    text-align: center;
+}
+
+h1 {
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #ffffff;
+}
+
+h2 {
+    margin: 0 0 18px;
+    color: #214d40;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 28px;
+    line-height: 1.3;
+}
+
+nav {
+    padding: 15px 20px;
+    background-color: #dfe9df;
+    text-align: center;
+}
+
+a {
+    color: #255d49;
+    text-underline-offset: 4px;
+}
+
+nav a {
+    display: inline-block;
+    margin: 4px 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    color: #214d40;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #214d40;
+    color: #ffffff;
+}
+
+main {
+    width: 92%;
+    max-width: 960px;
+    margin: 32px auto;
+}
+
+section {
+    margin-bottom: 24px;
+    padding: 28px;
+    border: 1px solid #d5dfd6;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.apresentacao {
+    border-top: 5px solid #7c9f78;
+}
+
+.foto-pessoal {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+    margin-top: 24px;
+    border: 5px solid #dfe9df;
+    border-radius: 12px;
+}
+
+ul {
+    margin: 0;
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+li::marker {
+    color: #477955;
+}
+
+#contato {
+    background-color: #eaf0e7;
+    border-color: #c3d4bf;
+}
+
+fieldset {
+    min-width: 0;
+    margin: 0;
+    padding: 24px;
+    border: 1px solid #bacbb8;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+legend {
+    padding: 0 10px;
+    color: #214d40;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border: 1px solid #92a89a;
+    border-radius: 6px;
+    background-color: #fbfcfa;
+    color: #273b35;
+    font: inherit;
+}
+
+textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #c4dfbb;
+    border-color: #214d40;
+}
+
+button {
+    margin: 4px 8px 0 0;
+    padding: 11px 24px;
+    border: 1px solid #214d40;
+    border-radius: 6px;
+    background-color: #214d40;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #ffffff;
+    color: #214d40;
+}
+
+button:hover {
+    background-color: #15382d;
+    color: #ffffff;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #a5bc65;
+    outline-offset: 4px;
+}
+
+footer {
+    padding: 28px 20px;
+    background-color: #193b32;
+    color: #ffffff;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 6px;
+}
+
+footer a {
+    color: #d9e9b8;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Ajustes para telas pequenas. */
+@media (max-width: 600px) {
+    header {
+        padding: 32px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    section,
+    fieldset {
+        padding: 20px;
+    }
+
+    nav a {
+        margin: 3px 0;
+        padding: 6px 9px;
+    }
+}
