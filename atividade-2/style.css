@@ -234,3 +234,132 @@ footer a:hover {
         padding: 6px 9px;
     }
 }
+
+/* Grid estrutura as áreas da página em duas colunas. */
+body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-height: 100vh;
+}
+
+header,
+nav,
+main,
+footer {
+    grid-column: 1 / -1;
+    min-width: 0;
+}
+
+header,
+footer {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    margin: 0;
+}
+
+/* A apresentação ocupa duas colunas; o formulário também. */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+main > section {
+    min-width: 0;
+    margin-bottom: 0;
+}
+
+.apresentacao,
+#tecnologias,
+#contato {
+    grid-column: 1 / -1;
+}
+
+main > section:not(.apresentacao):not(#tecnologias):not(#contato) {
+    grid-column: 1 / -1;
+}
+
+/* Grid distribui os quatro cartões em duas colunas. */
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Flexbox organiza o conteúdo de cada cartão verticalmente. */
+.cartao {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid #c3d4bf;
+    border-top: 4px solid #7c9f78;
+    border-radius: 10px;
+    background-color: #f3f7f0;
+}
+
+.cartao h3 {
+    margin: 0;
+    color: #214d40;
+    font-size: 22px;
+}
+
+.cartao p {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: auto 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tags li {
+    margin: 0;
+    padding: 3px 10px;
+    border: 1px solid #c0d3bc;
+    border-radius: 20px;
+    background-color: #e0ecda;
+    color: #214d40;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+@media (max-width: 760px) {
+    nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    nav a {
+        overflow-wrap: anywhere;
+    }
+
+    .grade-cartoes,
+    main {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cartao {
+        padding: 20px;
+    }
+}
